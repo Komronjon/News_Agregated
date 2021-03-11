@@ -1,0 +1,14 @@
+package com.example.news_agregated
+
+import android.os.Bundle
+import android.view.View
+import androidx.fragment.app.Fragment
+
+class Fragment_profile : Fragment(R.layout.fragment_profile2) {
+    lateinit var viewModel: NewsViewModel
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        viewModel = (activity as MainActivity).viewModel
+    }
+
+}

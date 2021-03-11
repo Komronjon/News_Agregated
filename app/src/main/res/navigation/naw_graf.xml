@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/naw_graf"
+    app:startDestination="@id/articleFragment">
+
+    <fragment
+        android:id="@+id/fragment_favorit"
+        android:name="com.example.news_agregated.Fragment_favorit"
+        android:label="fragment_favorit"
+        tools:layout="@layout/fragment_favorit" >
+        <action
+            android:id="@+id/action_fragment_favorit_to_articleFragment"
+            app:destination="@id/articleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_izbran"
+        android:name="com.example.news_agregated.Fragment_izbran"
+        android:label="Fragment_izbran" >
+        <action
+            android:id="@+id/action_fragment_izbran_to_articleFragment"
+            app:destination="@id/articleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_home"
+        android:name="com.example.news_agregated.Fragment_home"
+        android:label="Fragment_home" >
+        <action
+            android:id="@+id/action_fragment_home_to_articleFragment"
+            app:destination="@id/articleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_profile"
+        android:name="com.example.news_agregated.Fragment_profile"
+        android:label="Fragment_profile" />
+    <fragment
+        android:id="@+id/articleFragment"
+        android:name="com.example.news_agregated.ArticleFragment"
+        android:label="ArticleFragment" />
+</navigation>
