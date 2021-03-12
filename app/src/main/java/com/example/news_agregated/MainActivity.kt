@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var historyfragment:Fragment_izbran
     lateinit var favoritfragment:Fragment_favorit
     lateinit var profilefragment:Fragment_profile
+    lateinit var searchView:SearchViewFragment
     lateinit var viewModel:NewsViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,10 +47,10 @@ class MainActivity : AppCompatActivity() {
                         .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                         .commit()
                 }
-                R.id.izb_news->{
-                    historyfragment= Fragment_izbran()
+                R.id.rvSearchNews->{
+                    searchView= SearchViewFragment()
                     supportFragmentManager.beginTransaction()
-                        .replace(R.id.ic_fragment,historyfragment)
+                        .replace(R.id.ic_fragment,searchView)
                         .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                         .commit()
                 }
